@@ -1,9 +1,14 @@
 import React from 'react'
+import "./join.css"
+import logo from "../images/logo.png"
 
 const Join = () => {
   return (
-    <div>
-        <h1>Join Page</h1>
+    <div className='JoinPage'>
+        <div className="JoinContainer">
+            <img src={logo} alt="" />
+            <h1>C Chat</h1>
+        </div>
     </div>
   )
 }
