@@ -20,3 +20,9 @@
     width: 10vmax;
 
 }
+
+.JoinContainer >h1{
+    color: white;
+    font-size: 3vmax;
+    font-family: "Roboto";
+}
