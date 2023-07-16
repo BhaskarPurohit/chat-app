@@ -3,7 +3,12 @@ import "./join.css"
 import logo from "../images/logo.png"
 import { Link } from 'react-router-dom'
 
+let user;
+
 const Join = () => {
+    const sendUser = () =>{
+        user = document.getElementById('joinInput').value
+    }
   return (
     <div className='JoinPage'>
         <div className="JoinContainer">
