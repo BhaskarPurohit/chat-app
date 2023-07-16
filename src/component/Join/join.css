@@ -35,4 +35,7 @@
     width: 25vmax;
     padding: 1.5vmax;
     border: none;
+    outline: none;
+    font-size: 1.2vmax;
+    margin: 2vmax;
 }
