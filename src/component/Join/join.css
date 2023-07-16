@@ -23,6 +23,16 @@
 
 .JoinContainer >h1{
     color: white;
-    font-size: 3vmax;
+    font-size: 2.5vmax;
+    width: 25vmax;
+    border-bottom: 0.2vmax solid white;
+    text-align: center;
+    padding: 1vmax;
     font-family: "Roboto";
+}
+
+#joinInput{
+    width: 25vmax;
+    padding: 1.5vmax;
+    border: none;
 }
