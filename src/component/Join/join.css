@@ -29,6 +29,7 @@
     text-align: center;
     padding: 1vmax;
     font-family: "Roboto";
+    box-sizing: border-box;
 }
 
 #joinInput{
