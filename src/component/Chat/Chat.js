@@ -28,7 +28,8 @@ const Chat = () => {
             <div className="header"></div>
             <div className="chatBox"></div>
             <div className="inputBox">
-                {/* {user} */}
+                <input type="text" name="" id="chatInput" />
+                <button className='sendBtn'></button>
             </div>
         </div>
        

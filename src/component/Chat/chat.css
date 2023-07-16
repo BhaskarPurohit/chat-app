@@ -6,3 +6,45 @@
     justify-content: center;
     align-items: center;
 }
+
+.chatContainer{
+    background-color: white;
+    height: 60%;
+    width: 50%;
+}
+
+.header{
+    background-color: crimson;
+    height: 15%;
+}
+
+.chatBox{
+    border: 0.2vmax solid black;
+    height: 70%;
+    box-sizing: border-box;
+
+}
+
+.inputBox{
+    border: 0.2vmax solid black;
+    height: 15%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+#chatInput{
+    width: 80%;
+    padding: 2vmax;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    /* border: none; */
+    background-color: white;
+}
+
+.sendBtn{
+    background-color: crimson;
+    color: white;
+    border: none;
+    width: 20%;
+}
