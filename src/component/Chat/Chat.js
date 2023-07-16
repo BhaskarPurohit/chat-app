@@ -1,15 +1,16 @@
 import React, { useEffect } from 'react'
 import {user} from "../Join/Join"
 import socketIo from "socket.io-client"
+import "./chat.css"
 
-const ENDPOINT = "http://localhost/4500/"
+const ENDPOINT = "http://localhost:4500/"
 
 const Chat = () => {
 
     const socket = socketIo(ENDPOINT, {transports:['websocket']})
 
     useEffect(()=>{
-        socket.on('connet',()=>{
+        socket.on('connect',()=>{
             alert('connected')
         })
 
@@ -26,7 +27,9 @@ const Chat = () => {
         <div className="chatContainer">
             <div className="header"></div>
             <div className="chatBox"></div>
-            <div className="inputBox"></div>
+            <div className="inputBox">
+                {/* {user} */}
+            </div>
         </div>
        
 
