@@ -55,6 +55,7 @@
     background-color: crimson;
     box-sizing: border-box;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .joinbtn:hover{
