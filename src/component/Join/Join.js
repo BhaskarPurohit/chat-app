@@ -16,7 +16,7 @@ const Join = () => {
             <h1>C Chat</h1>
             <input type="text" placeholder='Enter you name' id="joinInput" />
             <Link to="/chat">
-            <button className='joinbtn'>Log In</button>
+            <button onClick={sendUser} className='joinbtn'>Log In</button>
             </Link>
         </div>
     </div>
@@ -24,3 +24,4 @@ const Join = () => {
 }
 
 export default Join
+export {user}
