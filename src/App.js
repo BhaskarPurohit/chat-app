@@ -14,12 +14,16 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Hello</h1>
       <Router>
-        <Routes>
-           <Route exact path="/" component={Join}/>
-           <Route path="/chat"/>
-           console.log("join")
-        </Routes>
+        
+           <Routes>
+
+            <Route exact path='/' Component={Join}/>
+            <Route path='/chat'/>
+           </Routes>
+           
+        
       </Router>
     </div>
   );
