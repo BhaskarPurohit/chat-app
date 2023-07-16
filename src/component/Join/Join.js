@@ -13,6 +13,7 @@ const sendUser = () =>{
 const Join = () => {
 
     const [name, setName] = useState("")
+    // console.log(name);
   
   return (
     <div className='JoinPage'>
@@ -20,7 +21,7 @@ const Join = () => {
             <img src={logo} alt="" />
             <h1>C Chat</h1>
             <input onChange={(e)=> setName(e.target.value) } type="text" placeholder='Enter you name' id="joinInput" />
-            <Link to="/chat">
+            <Link onClick={(event) => !name ?  event.preventDefault(): null} to="/chat">
             <button onClick={sendUser} className='joinbtn'>Log In</button>
             </Link>
         </div>
