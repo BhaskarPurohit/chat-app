@@ -38,4 +38,16 @@
     outline: none;
     font-size: 1.2vmax;
     margin: 2vmax;
+    box-sizing: border-box;
+}
+
+
+.joinbtn{
+    width: 25vamx;
+    padding: 1.5vmax;
+    border: none;
+    outline: none;
+    font-size: 1.2vmax;
+    margin: 2vmax;
+    background-color: crimson;
 }
