@@ -47,8 +47,16 @@
     width: 25vamx;
     padding: 1.5vmax;
     border: none;
+    color: white;
+    font-family: "Roboto";
     outline: none;
     font-size: 1.2vmax;
     margin: 2vmax;
     background-color: crimson;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.joinbtn:hover{
+    background-color: rgb(180,27,58);
 }
