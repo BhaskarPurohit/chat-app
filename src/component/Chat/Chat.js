@@ -17,6 +17,11 @@ const Chat = () => {
 
         console.log(socket);
         socket.emit('joined',{user})  //emit matlab data bhejna
+
+        socket.on('welcome',(data)=>{
+            console.log(data.user , data.message);
+        })
+
         return ()=>{
             
         }
