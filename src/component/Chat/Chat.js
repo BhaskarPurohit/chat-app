@@ -31,7 +31,7 @@ const Chat = () => {
             <div className="inputBox">
                 <input type="text" name="" id="chatInput" />
                 <button className='sendBtn'>
-                    <img src="sendLogo" alt="Send" />
+                    <img src={sendLogo} alt="Send" />
                 </button>
             </div>
         </div>
