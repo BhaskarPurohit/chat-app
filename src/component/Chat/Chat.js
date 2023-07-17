@@ -8,9 +8,10 @@ const ENDPOINT = "http://localhost:4500/"
 
 const Chat = () => {
 
-    const socket = socketIo(ENDPOINT, {transports:['websocket']})
+    
 
     useEffect(()=>{
+        const socket = socketIo(ENDPOINT, {transports:['websocket']})
         socket.on('connect',()=>{
             alert('connected')
         })
