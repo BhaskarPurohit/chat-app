@@ -16,7 +16,7 @@ const Chat = () => {
         })
 
 
-        socket.emit('joined',{user})
+        socket.emit('joined',{user})  //emit matlab data bhejna
         return ()=>{
             
         }
