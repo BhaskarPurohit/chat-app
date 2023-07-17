@@ -15,7 +15,7 @@ const Chat = () => {
             alert('connected')
         })
 
-
+        console.log(socket);
         socket.emit('joined',{user})  //emit matlab data bhejna
         return ()=>{
             
