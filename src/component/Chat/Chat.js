@@ -26,6 +26,10 @@ const Chat = () => {
             console.log(data.user, data.message);
         })
 
+        socket.on('leave', (data)=>{
+            console.log(data.user, data.message);
+        })
+
         return ()=>{
             socket.emit('disconnect')
             socket.off()
