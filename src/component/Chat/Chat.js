@@ -22,6 +22,10 @@ const Chat = () => {
             console.log(data.user , data.message);
         })
 
+        socket.on('userJoined', (data)=>{
+            console.log(data.user, data.message);
+        })
+
         return ()=>{
             
         }
