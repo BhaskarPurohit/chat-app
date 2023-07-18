@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {user} from "../Join/Join"
 import socketIo from "socket.io-client"
 import "./chat.css"
@@ -10,9 +10,11 @@ const ENDPOINT = "http://localhost:4500/"
 
 const Chat = () => {
 
+    const [id, setId] = useState("")
+
     const send = ()=>{
         const message = document.getElementById('chatInput').value
-        socket.emit('message',{message})
+        socket.emit('message',{message, id})
         document.getElementById('chatInput').value = ""
     }
 
@@ -21,6 +23,7 @@ const Chat = () => {
     useEffect(()=>{
         socket.on('connect',()=>{
             alert('connected')
+            setId(socket.id)
         })
 
         console.log(socket);
@@ -55,7 +58,7 @@ const Chat = () => {
             <div className="chatBox"></div>
             <div className="inputBox">
                 <input type="text" name="" id="chatInput" />
-                <button className='sendBtn'>
+                <button onClick={send()} className='sendBtn'>
                     <img src={sendLogo} alt="Send" />
                 </button>
             </div>
