@@ -4,12 +4,16 @@ import socketIo from "socket.io-client"
 import "./chat.css"
 import sendLogo from "../images/60525.png"
 
+let socket;
+
 const ENDPOINT = "http://localhost:4500/"
 
 const Chat = () => {
 
     const send = ()=>{
-        socket.emit('message',{})
+        const message = document.getElementById('chatInput').value
+        socket.emit('message',{message})
+        document.getElementById('chatInput').value = ""
     }
 
     const socket = socketIo(ENDPOINT, {transports:['websocket']})
