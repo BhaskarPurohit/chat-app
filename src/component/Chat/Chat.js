@@ -76,7 +76,7 @@ const Chat = () => {
         <div className="chatContainer">
             <div className="header"></div>
             <ReactScrollToBottom className="chatBox">
-                {messages.map((item, i) => <Message message={item}/>)}
+                {messages.map((item, i) => <Message message={item.message}/>)}
             </ReactScrollToBottom>
             <div className="inputBox">
                 <input type="text" name="" id="chatInput" />
