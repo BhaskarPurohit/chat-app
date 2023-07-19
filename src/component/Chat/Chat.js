@@ -4,6 +4,7 @@ import socketIo from "socket.io-client"
 import "./chat.css"
 import sendLogo from "../images/60525.png"
 import Message from "../message/Message"
+import ReactScrollToBottom from "react-scroll-to-bottom"
 
 let socket;
 
@@ -64,9 +65,9 @@ const Chat = () => {
     <div className='chatPage'>
         <div className="chatContainer">
             <div className="header"></div>
-            <div className="chatBox">
+            <ReactScrollToBottom className="chatBox">
                 {messages.map((item, i) => <Message message={item}/>)}
-            </div>
+            </ReactScrollToBottom>
             <div className="inputBox">
                 <input type="text" name="" id="chatInput" />
                 <button onClick={send()} className='sendBtn'>
