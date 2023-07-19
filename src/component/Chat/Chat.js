@@ -13,7 +13,7 @@ const ENDPOINT = "http://localhost:4500/"
 const Chat = () => {
 
     const [id, setId] = useState("")
-    const [messages, setMessages] = useState([1,2,3,4])
+    const [messages, setMessages] = useState([])
 
     const send = ()=>{
         const message = document.getElementById('chatInput').value
@@ -21,11 +21,14 @@ const Chat = () => {
         document.getElementById('chatInput').value = ""
     }
 
-    const socket = socketIo(ENDPOINT, {transports:['websocket']})
 
     useEffect(()=>{
+           socket = socketIo(ENDPOINT, {transports:['websocket']})
+
+
+
         socket.on('connect',()=>{
-            alert('connected')
+            alert('Connected')
             setId(socket.id)
         })
 
