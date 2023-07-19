@@ -36,14 +36,19 @@ const Chat = () => {
         socket.emit('joined',{user})  //emit matlab data bhejna
 
         socket.on('welcome',(data)=>{
+            setMessages([...messages, data])
             console.log(data.user , data.message);
         })
 
         socket.on('userJoined', (data)=>{
+            setMessages([...messages, data])
+
             console.log(data.user, data.message);
         })
 
         socket.on('leave', (data)=>{
+            setMessages([...messages, data])
+
             console.log(data.user, data.message);
         })
 
@@ -57,6 +62,8 @@ const Chat = () => {
 
   useEffect(()=>{
     socket.on('sendMessage', (data)=>{
+        setMessages([...messages, data])
+
         console.log(data.user, data.message, data.id);
     })
     return()=>{
