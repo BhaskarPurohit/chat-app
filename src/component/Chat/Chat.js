@@ -49,7 +49,14 @@ const Chat = () => {
     
     },[socket])
 
-
+  useEffect(()=>{
+    socket.on('sendMessage',(data)=>{
+        console.log(data.user, data.message, data.id);
+    })
+    return ()=>{
+        
+    }
+  })
 
   return (
     <div className='chatPage'>
