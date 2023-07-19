@@ -12,6 +12,7 @@ const ENDPOINT = "http://localhost:4500/"
 const Chat = () => {
 
     const [id, setId] = useState("")
+    const [messages, setMessages] = useState([1,2,3,4])
 
     const send = ()=>{
         const message = document.getElementById('chatInput').value
@@ -64,9 +65,7 @@ const Chat = () => {
         <div className="chatContainer">
             <div className="header"></div>
             <div className="chatBox">
-                <Message message={`hey how are you`}/>
-                <Message message={`hey how are you`}/>
-                <Message message={`hey how are you`}/>
+                {messages.map((item, i) => <Message message={item}/>)}
             </div>
             <div className="inputBox">
                 <input type="text" name="" id="chatInput" />
