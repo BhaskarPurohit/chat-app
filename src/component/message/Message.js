@@ -3,7 +3,7 @@ import "./message.css"
 
 const Message = ({message}) => {
   return (
-    <div>Message</div>
+    <div className='messageBox right'>Message</div>
   )
 }
 
