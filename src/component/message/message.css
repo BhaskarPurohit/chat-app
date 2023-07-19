@@ -1,5 +1,5 @@
 .messageBox{
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
     width: 50%;
     padding: 1vmax;
     margin: 1.8vmax;
@@ -13,4 +13,9 @@
     float: right;
     background-color: crimson;
     color: white;
+}
+
+.left{
+    float: left;
+    background-color: rgb(184, 255, 194);
 }
