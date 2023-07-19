@@ -3,6 +3,7 @@ import {user} from "../Join/Join"
 import socketIo from "socket.io-client"
 import "./chat.css"
 import sendLogo from "../images/60525.png"
+import Message from "../message/Message"
 
 let socket;
 
@@ -50,11 +51,11 @@ const Chat = () => {
     },[socket])
 
   useEffect(()=>{
-    socket.on('sendMessage',(data)=>{
+    socket.on('sendMessage', (data)=>{
         console.log(data.user, data.message, data.id);
     })
-    return ()=>{
-        
+    return()=>{
+
     }
   })
 
@@ -62,7 +63,11 @@ const Chat = () => {
     <div className='chatPage'>
         <div className="chatContainer">
             <div className="header"></div>
-            <div className="chatBox"></div>
+            <div className="chatBox">
+                <Message message={`hey how are you`}/>
+                <Message message={`hey how are you`}/>
+                <Message message={`hey how are you`}/>
+            </div>
             <div className="inputBox">
                 <input type="text" name="" id="chatInput" />
                 <button onClick={send()} className='sendBtn'>
