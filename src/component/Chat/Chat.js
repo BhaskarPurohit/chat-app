@@ -21,6 +21,8 @@ const Chat = () => {
         document.getElementById('chatInput').value = ""
     }
 
+    console.log(messages)
+
 
     useEffect(()=>{
            socket = socketIo(ENDPOINT, {transports:['websocket']})
